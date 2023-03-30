@@ -25,6 +25,7 @@
     "@testing-library/jest-dom": "5.16.2",
     "@testing-library/react": "12.1.5",
     "@tldraw/vec": "1.7.1",
+    "@rspack/cli": "0.1.4",
     "browser-fs-access": "0.29.1",
     "clsx": "1.1.1",
     "cross-env": "7.0.3",
@@ -50,6 +51,7 @@
     "react-scripts": "5.0.1",
     "roughjs": "4.5.2",
     "sass": "1.51.0",
+    "sass-loader": "13.2.2",
     "socket.io-client": "2.3.1",
     "tunnel-rat": "0.1.0",
     "workbox-background-sync": "^6.5.4",
@@ -88,7 +90,8 @@
     "pepjs": "0.5.3",
     "prettier": "2.6.2",
     "rewire": "6.0.0",
-    "typescript": "4.9.4"
+    "typescript": "4.9.4",
+    "@rspack/plugin-html": "0.1.4"
   },
   "engines": {
     "node": ">=14.0.0"
@@ -118,6 +121,8 @@
     "prepare": "husky install",
     "prettier": "prettier \"**/*.{css,scss,json,md,html,yml}\" --ignore-path=.eslintignore",
     "start": "react-scripts start",
+    "start:rspack": "rspack serve",
+    "build:rspack": "rspack build",
     "start:production": "npm run build && npx http-server build -a localhost -p 5001 -o",
     "test:all": "yarn test:typecheck && yarn test:code && yarn test:other && yarn test:app --watchAll=false",
     "test:app": "react-scripts test --passWithNoTests",
